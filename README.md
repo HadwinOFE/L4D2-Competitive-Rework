@@ -1,17 +1,17 @@
 # **L4D2 Competitive Rework**
 
-**IMPORTANT NOTES** - **DON'T IGNORE THESE!**
-* The goal for this repo is to work on **Linux**, specifically Ubuntu/Debian.
-> There is Windows support in this repo, but not everything is, you are of course welcome to contribute to get Windows fully up to date! 
-* This repository only supports Sourcemod **1.11** and up.
+**注意事项** - **请勿忽视！**
+* 本仓库的主要在 **Linux**上运行，特别是 Ubuntu/Debian
+> 本仓库支持 Windows，但不是完全支持 Windows，当然，我们也欢迎您为兼容 Windows 的全面更新做出贡献！
+* 本仓库仅支持 Sourcemod **1.11** 及以上版本
 
-## **About:**
+## **关于:**
 
-This is mainly a project that focuses on reworking the very outdated platform for competitive L4D2 for **Linux** Servers.
-It will contain both much needed fixes that are simply unable to be implemented on the older sourcemod versions as well as incompatible and outdated files being updated to working versions.
+这主要是一个针对 **Linux** 服务器上非常过时的 L4D2 比赛平台的改造项目
+其中既包括旧版源码中无法实现的紧急修复，也包括将不兼容的过时文件更新为可用版本
 
-> **Included Matchmodes:**
-* **Zonemod 2.8.4**
+> **内置的比赛模式:**
+* **Zonemod 2.8.6**
 * **Zonemod Hunters**
 * **Zonemod Retro**
 * **NeoMod 0.4a** 
@@ -23,19 +23,19 @@ It will contain both much needed fixes that are simply unable to be implemented 
 
 ---
 
-## **Important Notes**
-* We've added "**mv_maxplayers**" that replaces sv_maxplayers in the Server.cfg, this is used to prevent it from being overwritten every map change.
-  * On config unload, the value will be to the value used in the Server.cfg
-* Every Confogl matchmode will now execute 2 additional files, namely "**sharedplugins.cfg**" and "**generalfixes.cfg**" which are located in your **left4dead2/cfg** folder.
-  * "**General Fixes**" simply ensures that all the Fixes discussed in here are loaded by every Matchmode.
-  * "**Shared Plugins**" is for you, the Server host. You surely have some plugins that you'd like to be loaded in every matchmode, you can define them here. 
-    * **NOTE:** Plugin load locking and unlocking is no longer handled by the Configs themselves, so if you're using this project do **NOT** define plugin load locks/unlocks within the configs you're adding manually.
+## **重要说明**
+* 我们在 Server.cfg 中添加了 "**mv_maxplayers**"，用于替换 sv_maxplayers，以防止每次更改地图时都被覆盖
+  * 卸载config时，该值将与 Server.cfg 中使用的值一致
+* 每个 Confogl matchmode 都将执行两个附加文件，即 "**sharedplugins.cfg**"和 "**generalfixes.cfg**"，这两个文件位于**left4dead2/cfg**文件夹中。
+  * "**General Fixes**" 只是确保每个比赛模式都能加载此处关于BUG的修复
+  * "**Shared Plugins**" 是为你-服务器主机-准备的，您肯定希望在每种比赛模式下始终加载一些插件，您可以在这里添加
+    * **注意:** 插件加载的锁定和解锁不再由Config本身处理，因此如果使用此项目，**请不要**在手动添加的configs中定义插件加载的锁定/解锁
 
 ---
 	
-## **Credits:**
+## **鸣谢:**
 
-> **Foundation/Advanced Work:**
+> **基础/高级工作:**
 * A1m`
 * AlliedModders LLC.
 * "Confogl Team"
@@ -48,7 +48,7 @@ It will contain both much needed fixes that are simply unable to be implemented 
 * XutaxKamay
 * Visor
 
-> **Additional Plugins/Extensions:**
+> **附加插件/扩展:**
 * Accelerator74
 * 
 * Arti 
@@ -94,11 +94,11 @@ It will contain both much needed fixes that are simply unable to be implemented 
 * $atanic $pirit
 
 
-> **Competitive Mapping Rework:**
+> **比赛地图重绘:**
 * Derpduck
 
-> **Testing/Issue Reporting:**
-* Too many to list, keep up the great work in reporting issues!
+> **测试/问题报告:**
+* 太多了，无法一一列举，请继续努力报告问题！
 
-**NOTE:** If your work is being used and I forgot to credit you, my sincere apologies.  
-I've done my best to include everyone on the list, simply create an issue and name the plugin/extension you've made/contributed to and I'll make sure to credit you properly.
+**注意:** 如果您的作品被使用，而我忘记注明，我表示诚挚的歉意。 
+我已尽力将名单上的每个人都包括在内，您只需提一个issue并命名您**制作/贡献**的**插件/扩展**，我就会确保将您的名字正确记入名单
